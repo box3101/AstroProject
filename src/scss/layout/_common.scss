@@ -3606,6 +3606,7 @@ body.nopage .wrapper {
 	}
 
 	&.point {
+		margin-top: 2rem;
 		line-height: 1.75rem;
 
 		p {
@@ -4746,4 +4747,350 @@ body.nopage .wrapper {
 }
 .chip.free::after{
 	content: '무료';
+}
+
+.notice {
+	.searchBox {
+		padding: 0.8125rem;
+		border: 0.125rem solid #eee;
+		border-radius: 0.75rem;
+		text-align: center;
+		.comSelectWrap {
+			display: flex;
+			gap: 0.625rem;
+			.comSelectBox {
+				@include media($mo) {
+					flex: 1;
+				}
+			}
+		}
+	}
+	.searchBox__inner {
+		display: flex;
+		justify-content: center;
+		gap: 0.625rem;
+		@include media($mo) {
+			flex-direction: column;
+		}
+		&.custom {
+			gap: 0px;
+			@include media($tab) {
+				flex-direction: column;
+			}
+			.comSelectWrap {
+				.comSelectBox {
+					label {
+						@include media($tab) {
+							padding-right: 0;
+						}
+					}
+					@include media($tab) {
+						width: 100%;
+						flex-direction: column;
+						display: flex;
+						&:after {
+							@include media($tab) {
+								top: 40px;
+							}
+						}
+					}
+					.comSelect {
+						@include media($tab) {
+							width: 100% !important;
+							margin-top: 8px;
+						}
+					}
+				}
+				margin-right: 0.5rem;
+				@include media($tab) {
+					margin-right: 0;
+				}
+			}
+			.searchArea__tit {
+				padding-right: 0.625rem;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				top: -3px;
+				@include media($tab) {
+					width: 100%;
+					justify-content: center;
+					padding-right: 0;
+					top: 0;
+					max-height: 40px;
+					margin-top: 8px;
+				}
+				label {
+					position: relative;
+					top: 2px;
+					@include media($tab) {
+						top: 0;
+					}
+				}
+			}
+			.comInput {
+				margin-right: 0.5rem;
+				@include media($tab) {
+					margin-right: 0;
+					width: 100% !important;
+				}
+			}
+			.sizeMid {
+				height: 2.22725rem;
+				@include media($tab) {
+					margin-top: 8px;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.searchBox__select {
+		width: 9.375rem;
+		height: 2.0625rem;
+		font-size: 0.9375rem;
+		color: #555555;
+		border-radius: 0.3125rem;
+		border: 0.0625rem solid #b5b5b5;
+	}
+	.searchBox__input {
+		width: 28.125rem;
+		height: 2.0625rem;
+		font-size: 0.9375rem;
+		color: #555555;
+		border-radius: 0.3125rem;
+		border: 0.0625rem solid #b5b5b5;
+	}
+	.searchBox .sizeMid {
+		@include media($mo) {
+			width: 100%;
+		}
+	}
+	.comSearchBox .txt span {
+		display: inline-block;
+		color: var(--basic-color-secondary);
+		font-weight: bold;
+	}
+	.w172 {
+		width: 10.75rem !important;
+		height: 4rem !important;
+	}
+	.trHoverNone .flex.gap20 {
+		align-items: center;
+	}
+	.flexColumn {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0.625rem 0;
+		gap: 0px !important;
+	}
+	.boardArrPrev {
+		position: relative;
+		@include after {
+			@include pCenterY;
+			right: 1.225rem;
+			@include bg-url("img", "board-view-prev-arw.png", "cover");
+			width: 0.75rem;
+			height: 0.4375rem;
+			@include media($mo) {
+				right: 5px;
+			}
+		}
+	}
+	.boardArrNext {
+		position: relative;
+		@include after {
+			@include pCenterY;
+			right: 1.225rem;
+			@include bg-url("img", "board-view-next-arw.png", "cover");
+			width: 0.75rem;
+			height: 0.4375rem;
+			@include media($mo) {
+				right: 5px;
+			}
+		}
+	}
+}
+
+.sharingSpace {
+	.tabBtnWrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.9375rem;
+		li {
+			width: calc(16.666% - (0.9375rem * 5) / 6);
+			button {
+				padding: 0;
+				color: #555 !important;
+				height: 100%;
+				width: 100% !important;
+				min-height: 3.5rem;
+				@extend %boxShadowType-1;
+				margin: 0;
+				@include media($web) {
+					letter-spacing: -1px;
+				}
+				&.on {
+					background: #0085cf;
+					color: #fff !important;
+				}
+			}
+		}
+	}
+	.calendar {
+		margin: 3.75rem auto;
+		width: 100%;
+		height: 40rem;
+		.fc .fc-button-primary {
+			background: #fff;
+		}
+		.comSelectBox {
+			width: 12.5rem;
+		}
+	}
+}
+
+@include media($web) {
+	.sharingSpace {
+		.tabBtnWrap li {
+			width: calc(33.3% - (0.9375rem * 5) / 6);
+		}
+		.sizeXlg {
+			font-size: 1rem !important;
+		}
+	}
+	.w180 {
+		width: 100%;
+	}
+	.comTable-2 table {
+		width: 100%;
+		colgroup {
+			display: none;
+		}
+	}
+}
+
+/* 달력 */
+.calendarWrap {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.calendarWrap .left {
+	position: relative;
+	flex: 1;
+}
+.calendarWrap .right {
+	display: none;
+	width: 20%;
+	margin-left: 0.9375rem;
+	margin-top: 3rem;
+	padding: 0.625rem;
+	border: 0.0625rem solid #aaa;
+	max-height: 27.9375rem;
+	overflow-y: scroll;
+}
+.calendarWrap .impossibleDate li {
+	font-size: 0.9375rem;
+	margin-bottom: 0.3125rem;
+}
+.calendarWrap .txtWrap {
+	position: absolute;
+	right: 0rem;
+	top: 5.3125rem;
+	display: flex;
+	gap: 1.5625rem;
+	font-size: 0.875rem;
+}
+.calendarWrap .txtWrap li {
+	position: relative;
+}
+.calendarWrap .txtWrap li:first-child::before {
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	left: -0.9375rem;
+	display: block;
+	content: "";
+	width: 0.625rem;
+	height: 0.625rem;
+	background: rgb(238 246 255);
+	border: 1px solid #666;
+}
+.calendarWrap .txtWrap li:nth-of-type(2)::before {
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	left: -0.9375rem;
+	display: block;
+	content: "";
+	width: 0.625rem;
+	height: 0.625rem;
+	background: #eee;
+	border: 1px solid #666;
+}
+.calendarWrap .fc-today-button {
+	display: none !important;
+}
+.calendarWrap .fc .fc-button-primary {
+	background: #0195d3 !important;
+	border: 0.0625rem solid #0195d3 !important;
+	margin: 0 0.125rem !important;
+}
+.calendarWrap .fc .fc-button-primary:last-of-type {
+	margin-right: 0 !important;
+}
+.calendarWrap .fc .fc-toolbar {
+	justify-content: flex-start;
+}
+.calendarWrap .fc .fc-daygrid-day.fc-day-today {
+	background-color: transparent !important;
+}
+.calendarWrap .fc .fc-day-other {
+	background: #fff;
+}
+.unavailable {
+	background-color: #ddd;
+}
+.available {
+	background: dbecfa;
+}
+
+.fc-icon-chevron-left:before {
+	color: #fff;
+}
+.fc-icon-chevron-right:before {
+	color: #fff;
+}
+.form__wrap .con__top {
+	gap: 0 !important;
+}
+.form__wrap .id__top li:nth-child(2) {
+	border-left: none !important;
+}
+.form__wrap .pw__top li:nth-child(1) {
+	border-right: none !important;
+}
+.form__wrap .form__list__id p,
+.form__wrap .form__list__pw p {
+	margin-top: 1rem;
+	font-size: 1rem;
+	color: $cMain;
+}
+.subcotent .form__wrap .comBtn {
+	font-size: 1.2rem;
+	&:hover {
+		top: 0;
+	}
+}
+.form__wrap .id__top li a,
+.form__wrap .con__top li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.subcotent .form__wrap .comBtn.bgMain {
+	background: $cMain;
 }

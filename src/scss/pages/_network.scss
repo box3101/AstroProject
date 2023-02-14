@@ -1,0 +1,115 @@
+#detailSlideItem,#sharingSpaceItem {
+	.swiper-wrapper {
+		margin-top: 10px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.swiper-slide {
+		opacity: 0.4;
+		width: calc(25% - 7.5008px)!important;
+		&:nth-of-type(4n){
+			margin-right: 0!important;
+		}
+		img {
+			width: 100%;
+			height: 63px;
+		}
+	}
+
+	.swiper-slide-thumb-active {
+		opacity: 1;
+	}
+}
+.subcotent .introType .row__body .txtWrap .tt{
+	display: block;
+	margin-bottom: 0.5rem;
+}
+.subcotent .introType .row__body .txtWrap span:not(.tt){
+	display: inline-block;
+	padding-left: 1.0625rem;
+	margin-bottom: 0.3125rem;
+}
+.row__body .txtWrap{
+	line-height: 1.5;
+}
+.subcotent .introType .row__body .txtWrap{
+	color: #747474!important;
+}
+.comDescTxt{
+	font-size: 1rem;
+	color: #333;
+	margin-bottom: 1.25rem;
+	display: block;
+	padding-left: 1.6875rem;
+}
+/* sgFileUploader */
+.sgFileUploader {
+  padding: 10px 0 0 0;
+  min-width: 100%;
+}
+
+.sgFileUploader .boxDragndrop {
+  display: none;
+}
+
+.sgFileUploader .inputFile {
+  display: none;
+}
+
+
+.sgFileUploader .fileBox.has-advanced-upload {
+  outline: 1px dashed #aaaaaa;
+}
+
+.sgFileUploader .fileBox.has-advanced-upload .boxDragndrop {
+  display: inline;
+}
+
+.sgFileUploader .fileBox.is-dragover {
+  background-color: #e8faff;
+}
+
+.sgFileUploader .divInputFile label {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.sgFileUploader .divStatus,
+.sgFileUploader .divFileList,
+.sgFileUploader .divNewFileList {
+  font-size: 14px;
+  margin: 10px 0 0 0;
+  min-width: 100%;
+}
+
+.sgFileUploader .fileList a label {
+  cursor: pointer;
+}
+
+.sgFileUploader .close {
+  cursor: pointer;
+  border: none;
+  background: url(../img/btn-close.png) no-repeat;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-left: 10px;
+  text-indent: -9999px;
+}
+
+// 20230127 공통 file css 수정
+.sgFileUploader .fileBox {
+  width: 100%;
+  font-size: 1em;
+  color: #aaa;
+  background-color: #f6f6f6;
+  position: relative;
+	padding: 0;
+}
+.divInputFile label{
+	padding: 30px 15px;
+  box-sizing: border-box;
+}

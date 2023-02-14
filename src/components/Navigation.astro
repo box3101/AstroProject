@@ -1,11 +1,16 @@
 ---
 const NavMenu1 = ["Greeting", "VsnNdGoal", "DclrDoc", "Ordinance", "MajorBusiness", "Directions"];
 const NavMenu1Ko = ["인사말", "비전과 목표", "선언문", "조례", "주요사업소개", "오시는길"];
-const NavMenu2 = ["수강신청", "배우는바다 Online"];
-const NavMenu3 = ["평생학습기관", "평생학습동아리","우리동네강사","찾아가는 강좌","우리동네문화센터","인천시민대학"];
-const NavMenu4 = ["대관 안내", "대관 신청","나눔공간"];
-const NavMenu5 = ["공지사항", "자료실"];
-const NavMenu6 = ["구석구석 탐방", "중구마을학교","마을교육활동가","교육경비 지원사업","인터넷 수능방송 지원"];
+const NavMenu2 = ["CourseRegistration", "SeaOfLearning"];
+const NavMenu2Ko = ["수강신청", "배우는바다 Online"];
+const NavMenu3 = ["LifelongLearningInstitute", "LifelongLearningClub","TeacherNeighborhood","OnSiteCourse","CulturalCenter","CitizensCollege"];
+const NavMenu3Ko = ["평생학습기관", "평생학습동아리","우리동네강사","찾아가는 강좌","우리동네문화센터","인천시민대학"];
+const NavMenu4 = ["RenterInformation", "RenterApplication","CommunitySpaceInformation"];
+const NavMenu4Ko = ["대관 안내", "대관 신청","나눔공간"];
+const NavMenu5 = ["notice", "library"];
+const NavMenu5Ko = ["공지사항", "자료실"];
+const NavMenu6 = ["Exploration", "JungguVillageSchool","CommunityEducationActivist","EducationalExpenseSupportProgram","BroadcastingSupport"];
+const NavMenu6Ko = ["구석구석 탐방", "중구마을학교","마을교육활동가","교육경비 지원사업","인터넷 수능방송 지원"];
 ---
   
 <ul class="gnb" id="gnb" tabindex="0">
@@ -16,33 +21,33 @@ const NavMenu6 = ["구석구석 탐방", "중구마을학교","마을교육활�
     </ul>
   </li>
   <li class="gnbItem">
-    <a href={`${NavMenu2[0]}.html`} class="gnbLink"> 수강신청</a>
+    <a href={`../enrollment/${NavMenu2[0]}.html`} class="gnbLink"> 수강신청</a>
     <ul class="subPanel">
-      {NavMenu2.map((el) => <li><a href={`${el}.html`}>{el}</a></li>)}
+      {NavMenu2.map((el,idx) => <li><a href={`../enrollment/${el}.html`}>{NavMenu2Ko[idx]}</a></li>)}
     </ul>
   </li>
   <li class="gnbItem">
-    <a href={`${NavMenu3[0]}.html`} class="gnbLink"> 네트워크</a>
+    <a href={`../netWork/${NavMenu3[0]}.html`} class="gnbLink"> 네트워크</a>
     <ul class="subPanel">
-      {NavMenu3.map((el) => <li><a href={`${el}.html`}>{el}</a></li>)}
+      {NavMenu3.map((el,idx) => <li><a href={`../netWork/${el}.html`}>{NavMenu3Ko[idx]}</a></li>)}
     </ul>
   </li>
   <li class="gnbItem">
-    <a href={`${NavMenu4[0]}.html`} class="gnbLink"> 나눔공간</a>
+    <a href={`../communityspace/${NavMenu4[0]}.html`} class="gnbLink"> 나눔공간</a>
     <ul class="subPanel">
-      {NavMenu4.map((el) => <li><a href={`${el}.html`}>{el}</a></li>)}
+      {NavMenu4.map((el,idx) => <li><a href={`../communityspace/${el}.html`}>{NavMenu4Ko[idx]}</a></li>)}
     </ul>
   </li>
   <li class="gnbItem">
-    <a href={`${NavMenu5[0]}.html`} class="gnbLink"> 열린마당</a>
+    <a href={`../OpenForum/${NavMenu5[0]}.html`} class="gnbLink"> 열린마당</a>
     <ul class="subPanel">
-      {NavMenu5.map((el) => <li><a href={`${el}.html`}>{el}</a></li>)}
+      {NavMenu5.map((el,idx) => <li><a href={`../OpenForum/${el}.html`}>{NavMenu5Ko[idx]}</a></li>)}
     </ul>
   </li>
   <li class="gnbItem">
-    <a href={`${NavMenu6[0]}.html`} class="gnbLink"> 교육혁신지구</a>
+    <a href={`../EducationInnovationZone/${NavMenu6[0]}.html`} class="gnbLink"> 교육혁신지구</a>
     <ul class="subPanel">
-      {NavMenu6.map((el) => <li><a href={`${el}.html`}>{el}</a></li>)}
+      {NavMenu6.map((el,idx) => <li><a href={`../EducationInnovationZone/${el}.html`}>{NavMenu6Ko[idx]}</a></li>)}
     </ul>
   </li>
 </ul>
