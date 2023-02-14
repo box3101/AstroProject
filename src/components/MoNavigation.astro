@@ -1,0 +1,137 @@
+---
+const NavMenu1 = ["Greeting", "VsnNdGoal", "DclrDoc", "Ordinance", "MajorBusiness", "Directions"];
+const NavMenu1Ko = ["인사말", "비전과 목표", "선언문", "조례", "주요사업소개", "오시는길"];
+const NavMenu2 = ["수강신청", "배우는바다 Online"];
+const NavMenu3 = ["평생학습기관", "평생학습동아리","우리동네강사","찾아가는 강좌","우리동네문화센터","인천시민대학"];
+const NavMenu4 = ["대관 안내", "대관 신청","나눔공간"];
+const NavMenu5 = ["공지사항", "자료실"];
+const NavMenu6 = ["구석구석 탐방", "중구마을학교","마을교육활동가","교육경비 지원사업","인터넷 수능방송 지원"];
+---
+
+<button type="button" class="menuToggle" title="모바일 메뉴 토글버튼">
+	<span class="menuItem"></span>
+	<span class="menuItem"></span>
+	<span class="menuItem"></span>
+</button>
+<div class="mobileNav">
+	<div class="moLogo">
+		<a href="../pages/main.html" tabindex="0">
+			<img src="../img/logo.png" alt="인천중구교육포털 배우는바다" />
+		</a>
+	</div>
+	<ul class="mobileNavList">
+		<li class="mobileNavItem">
+			<a href="#"> 평생학습도시</a>
+			<ul class="dapth2">
+				{NavMenu1.map((el,idx) => <li><a href={`../lftmLrnCty/${el}.html`}>{NavMenu1Ko[idx]}</a></li>)}
+			</ul>
+		</li>
+		<li class="mobileNavItem">
+			<a href="#"> 수강신청</a>
+			<ul class="dapth2">
+				<li>
+					<a href="#">평생학습관</a>
+				</li>
+				<li>
+					<a href="#">동행정복지센터</a>
+				</li>
+				<li>
+					<a href="#">문화센터</a>
+				</li>
+				<li>
+					<a href="#">온라인 학습</a>
+				</li>
+				<li>
+					<a href="#">중구구민대학</a>
+				</li>
+			</ul>
+		</li>
+		<li class="mobileNavItem">
+			<a href="#"> 네트워크</a>
+			<ul class="dapth2">
+				<li>
+					<a href="#">평생학습기관</a>
+				</li>
+				<li>
+					<a href="#">평생학습 동아리</a>
+				</li>
+				<li>
+					<a href="#">우리동네강사</a>
+				</li>
+				<li>
+					<a href="#">찾아가는 학습</a>
+				</li>
+			</ul>
+		</li>
+		<li class="mobileNavItem">
+			<a href="#"> 나눔공간</a>
+			<ul class="dapth2">
+				<li>
+					<a href="#">대관 안내</a>
+				</li>
+				<li>
+					<a href="#">대관 신청</a>
+				</li>
+				<li>
+					<a href="#">나눔공간</a>
+				</li>
+			</ul>
+		</li>
+		<li class="mobileNavItem">
+			<a href="#"> 열린마당</a>
+			<ul class="dapth2">
+				<li>
+					<a href="#">공지사항</a>
+				</li>
+				<li>
+					<a href="#">공모사업 신청</a>
+				</li>
+				<li>
+					<a href="#">자료실</a>
+				</li>
+			</ul>
+		</li>
+		<li class="mobileNavItem">
+			<a href="#"> 교육혁신지구</a>
+			<ul class="dapth2">
+				<li>
+					<a href="#">구석구석 탐방</a>
+				</li>
+				<li>
+					<a href="#">중구마을학교</a>
+				</li>
+				<li>
+					<a href="#">마을교육활동가</a>
+				</li>
+				<li>
+					<a href="#">교육경비 지원사업</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<!-- 로그인 전 -->
+	<div class="utilMenu">
+		<div>
+			<button type="button" class="login">
+				<span class="hidden">로그인</span>
+			</button>
+		</div>
+	</div>
+	<!-- 로그인 전  eee-->
+	<!-- 로그인 후  -->
+	<div class="utilMenu">
+		<div>
+			<button type="button" class="logout">
+				<span class="hidden">로그아웃</span>
+			</button>
+		</div>
+		<div>
+			<button type="button" class="mypage">
+				<span class="hidden">마이페이지</span>
+			</button>
+		</div>
+	</div>
+	<!-- 로그인 후 eee-->
+</div>
+

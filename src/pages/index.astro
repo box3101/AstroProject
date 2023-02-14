@@ -1,92 +1,393 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Home Page Main";
+const idName = "main";
 ---
 
-<Layout title="Welcome to Astro">
-	<main>
-		<h1>My Astro Site</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs.13143"
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries.Supercharge your project with new frameworks and libraries.Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. 1313"
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. 14"
-			/>
-		</ul>
-	</main>
-</Layout>
+<BaseLayout pageTitle={pageTitle}>
+	<!-- main -->
+	<main id={idName} class="main">
+		<!-- 컨텐츠가 들어갈 부분 -->
+		<div class="contentBody">
+			<!-- visual -->
+			<figure class="visual">
+				<div class="inner">
+					<div class="visualSlide">
+						<!-- 다음 버튼 -->
+						<button type="button" class="swiper-button-next"></button>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+						<!-- 슬라이드 -->
+						<div id="visualSlide" class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#">
+										<img
+											src="img/visual-img01.png"
+											alt="메인 슬라이드 이미지"
+										/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<img
+											src="https://via.placeholder.com/1400x385"
+											alt="메인 슬라이드 이미지"
+										/>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<img
+											src="img/visual-img01.png"
+											alt="메인 슬라이드 이미지"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- 이전 버튼 -->
+						<button type="button" class="swiper-button-prev"></button>
+
+						<!-- 시작,정지 -->
+						<div class="autoplayControl">
+							<button aria-pressed="false" aria-label="자동 재생 일시 정지"
+							></button>
+						</div>
+
+						<!-- 페이징 -->
+						<div class="comSlidePaging">
+							<div class="currentNum"></div>
+							<span class="bar">/</span>
+							<div class="allNum"></div>
+						</div>
+					</div>
+				</div>
+			</figure>
+			<!-- visual eee-->
+
+			<!-- 주요서비스 -->
+			<div class="service" id="contentmain" tabindex="0">
+				<div class="inner">
+					<div class="comTitle-1">
+						<div class="comTitle-1__tit wow fadeInUp" data-wow-delay="0.2s">
+							주요 서비스
+						</div>
+						<div class="comTitle-1__txt wow fadeInUp" data-wow-delay="0.4s">
+							자주 사용하는 서비스를 바로 만나보세요
+						</div>
+					</div>
+					<ul class="service__list flex flex16 gap15">
+						<li class="wow fadeInUp">
+							<a href="#">
+								<div class="img">
+									<img src="img/service01.png" alt="" />
+								</div>
+								<p>수강신청</p>
+							</a>
+						</li>
+						<li class="wow fadeInUp" data-wow-delay="0.2s">
+							<a href="#">
+								<div class="img">
+									<img src="img/service02.png" alt="" />
+								</div>
+								<p>대관신청</p>
+							</a>
+						</li>
+						<li class="wow fadeInUp" data-wow-delay="0.4s">
+							<a href="#">
+								<div class="img">
+									<img src="img/service03.png" alt="" />
+								</div>
+								<p>찾아가는 학습</p>
+							</a>
+						</li>
+						<li class="wow fadeInUp" data-wow-delay="0.6s">
+							<a href="#">
+								<div class="img">
+									<img src="img/service04.png" alt="" />
+								</div>
+								<p>중구마을학교</p>
+							</a>
+						</li>
+						<li class="wow fadeInUp" data-wow-delay="0.8s">
+							<a href="#">
+								<div class="img">
+									<img src="img/service05.png" alt="" />
+								</div>
+								<p>우리동네 강사</p>
+							</a>
+						</li>
+						<li class="wow fadeInUp" data-wow-delay="1s">
+							<a href="#">
+								<div class="img">
+									<img src="img/service06.png" alt="" />
+								</div>
+								<p>공모사업 신청</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 주요서비스 eee -->
+
+			<!-- 강좌검색 -->
+			<div class="courseSearch">
+				<div class="inner">
+					<div class="comTitle-1">
+						<div
+							class="comTitle-1__tit cWhite wow fadeInUp"
+							data-wow-delay="0.2s"
+						>
+							강좌 검색
+						</div>
+						<div
+							class="comTitle-1__txt cWhite wow fadeInUp"
+							data-wow-delay="0.4s"
+						>
+							필요한 강좌를 바로 검색해서 확인해보세요
+						</div>
+					</div>
+
+					<form action="">
+						<div class="courseSearch__btn wow fadeInUp" data-wow-delay="0.6s">
+							<label for="a1" class="hidden">강좌검색</label>
+							<input
+								id="a1"
+								class="comInput"
+								type="text"
+								placeholder="검색어를 입력하세요"
+							/>
+							<button type="button" aria-label="강좌검색"> </button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- 강좌검색 eee-->
+
+			<!-- 이달의 강좌, 공지사항 -->
+			<div class="mainBottom">
+				<div class="inner">
+					<div class="flex flex50 gap60">
+						<!-- 이달의 강좌 -->
+						<div class="courseMonth">
+							<div class="comTitle-1">
+								<div class="comTitle-1__tit wow fadeInUp" data-wow-delay="0.2s">
+									이달의 강좌
+								</div>
+								<div class="comTitle-1__txt wow fadeInUp" data-wow-delay="0.4s">
+									이달의 새로운 강좌와 추천 강좌를 확인하세요
+								</div>
+							</div>
+							<ul>
+								<li class="wow fadeInUp" data-wow-delay="0.2s">
+									<a href="#">
+										<div class="chipWrap">
+											<div class="flex jcBetween aiCenter">
+												<span class="chip">건강 / 스포츠</span>
+												<div>
+													<div class="chipWrap mb0">
+														<span class="chip receipt">접수중</span>
+														<span class="chip pay">유료</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="txt twoLine">
+											댄스스포츠 라인&라틴솔로 (여성전용) -
+											서부여성회관댄스스포츠 라인&라틴솔로 (여성전용) -
+											서부여성회관댄스스포츠 라인&라틴솔로 (여성전용) -
+											서부여성회관
+										</div>
+										<div class="bottom">
+											<dl>
+												<dt class="date">교육기간:</dt>
+												<dd>22.10.11 ~ 22.10.30</dd>
+											</dl>
+											<dl>
+												<dt class="place">장소:</dt>
+												<dd>서부여성회관</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								<li class="wow fadeInUp" data-wow-delay="0.4s">
+									<a href="#">
+										<div class="chipWrap">
+											<div class="flex jcBetween aiCenter">
+												<span class="chip">교양</span>
+												<div>
+													<div class="chipWrap mb0">
+														<span class="chip deadline">마감</span>
+														<span class="chip free">무료</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="txt twoLine">
+											글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트
+										</div>
+										<div class="bottom">
+											<dl>
+												<dt class="date">교육기간:</dt>
+												<dd>22.10.11 ~ 22.10.30</dd>
+											</dl>
+											<dl>
+												<dt class="place">장소:</dt>
+												<dd>서부여성회관</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								<li class="wow fadeInUp" data-wow-delay="0.6s">
+									<a href="#">
+										<div class="chipWrap">
+											<div class="flex jcBetween aiCenter">
+												<span class="chip">건강 / 스포츠</span>
+												<div>
+													<div class="chipWrap mb0">
+														<span class="chip receipt">접수중</span>
+														<span class="chip pay">유료</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="txt twoLine">
+											글자테스트
+											글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트
+										</div>
+										<div class="bottom">
+											<dl>
+												<dt class="date">교육기간:</dt>
+												<dd>22.10.11 ~ 22.10.30</dd>
+											</dl>
+											<dl>
+												<dt class="place">장소:</dt>
+												<dd>서부여성회관</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								<li class="wow fadeInUp" data-wow-delay="0.8s">
+									<a href="#">
+										<div class="chipWrap">
+											<div class="flex jcBetween aiCenter">
+												<span class="chip">교양</span>
+												<div>
+													<div class="chipWrap mb0">
+														<span class="chip deadline">마감</span>
+														<span class="chip free">무료</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="txt twoLine">
+											글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트
+										</div>
+										<div class="bottom">
+											<dl>
+												<dt class="date">교육기간:</dt>
+												<dd>22.10.11 ~ 22.10.30</dd>
+											</dl>
+											<dl>
+												<dt class="place">장소:</dt>
+												<dd>서부여성회관</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<a href="#" class="moreBtn">
+								<span class="hidden">이달의 강좌 더보기</span>
+							</a>
+						</div>
+
+						<!-- 공지사항 -->
+						<div class="notice">
+							<div class="comTitle-1">
+								<div class="comTitle-1__tit wow fadeInUp" data-wow-delay="0.2s">
+									공지사항
+								</div>
+								<div class="comTitle-1__txt wow fadeInUp" data-wow-delay="0.4s">
+									평생학습 센터의 최신 소식들을 한 눈에 확인해보세요
+								</div>
+							</div>
+							<ul class="wow fadeInUp" data-wow-delay="0.4s">
+								<li>
+									<div class="left">
+										<div class="num">01</div>
+										<a href="#" class="txt oneLine"
+											>인하대학교와 함께하는 우리동네 지식팡팡 콘서트 교...
+										</a>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+								<li>
+									<div class="left">
+										<div class="num">02</div>
+										<a href="#" class="txt oneLine"
+											>인하대학교와 함께하는 우리동네 지식팡팡 콘서트 교...</a
+										>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+								<li>
+									<div class="left">
+										<div class="num">03</div>
+										<a href="#" class="txt oneLine"
+											>장애인 평생 우리동네 지식팡팡 콘 서트 5주차 강의-1
+											(영화로..</a
+										>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+								<li>
+									<div class="left">
+										<div class="num">04</div>
+										<a href="#" class="txt oneLine"
+											>글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트</a
+										>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+								<li>
+									<div class="left">
+										<div class="num">05</div>
+										<a href="#" class="txt oneLine"
+											>글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트</a
+										>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+								<li>
+									<div class="left">
+										<div class="num">06</div>
+										<a href="#" class="txt oneLine"
+											>글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트</a
+										>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+								<li>
+									<div class="left">
+										<div class="num">07</div>
+										<a href="#" class="txt oneLine"
+											>글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트글자테스트</a
+										>
+									</div>
+									<div class="date">2022.08.02</div>
+								</li>
+							</ul>
+							<a href="#" class="moreBtn">
+								<span class="hidden">공지사항 더보기</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 컨텐츠가 들어갈 부분 eee -->
+	</main>
+	<!-- main eee -->
+</BaseLayout>

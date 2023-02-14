@@ -1,0 +1,456 @@
+// input
+.comInput {
+	@extend %formReset;
+	font-weight: 700;
+	&.textRight {
+		text-align: right;
+		padding-right: 0.9375rem;
+	}
+	font-weight: 500;
+	font-size: 1.25rem;
+	&::placeholder {
+		color: $cGray-2 !important;
+		letter-spacing: -0.0625rem !important;
+		font-weight: 400 !important;
+	}
+}
+input:read-only {
+	background: #eee;
+	border: 0.0625rem solid #eee;
+	&:focus,
+	&:hover {
+		background: #ddd;
+		outline: none !important;
+		border: none !important;
+		box-shadow: none !important;
+	}
+}
+
+// select
+.comSelectBox {
+	position: relative;
+	z-index: 2;
+	@include after {
+		@include pCenterY;
+		pointer-events: none;
+		right: 0.625rem;
+		@extend %triangle;
+	}
+	.comSelect {
+		@extend %formReset;
+	}
+}
+
+//textarea
+.comTxtarea {
+	@extend %formReset;
+	height: 9.375rem !important;
+	padding: 0.855rem !important;
+	line-height: 1.6 !important;
+	font-weight: 400 !important;
+	font-size: 0.9rem !important;
+	&::placeholder {
+		color: $cGray-2 !important;
+		letter-spacing: -0.0625rem !important;
+		font-weight: 300 !important;
+		line-height: 1.6 !important;
+		font-size: 1rem !important;
+	}
+}
+
+//table
+.comTable-2 {
+	// margin-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	padding-left: 2rem;
+	&.pl8 {
+		margin-left: -8px;
+	}
+	&.pl8 th {
+		padding-left: 8px;
+	}
+	&.w700 {
+		table {
+			width: 766px;
+			@include media($mo) {
+				width: 100%;
+			}
+		}
+	}
+	@include media($mo) {
+		padding-left: 0;
+	}
+	table {
+		width: auto;
+	}
+	td ul li {
+		padding: 5px 0;
+		.desc {
+			flex: none;
+			position: relative;
+			top: 8px;
+		}
+	}
+	border-bottom: 0.0625rem solid #666666;
+	.formRadio label {
+		color: #555;
+		font-size: 1rem;
+	}
+	th,
+	td {
+		padding: 15px 0;
+		text-align: left;
+		font-size: 1rem;
+	}
+	th {
+		color: #00489e;
+		font-weight: bold;
+		vertical-align: middle;
+		position: relative;
+		> label {
+			color: #00489e;
+			font-weight: bold;
+		}
+		span {
+			color: red;
+		}
+	}
+	td {
+		color: #2d2d2d;
+		padding-left: 0 0.9375rem;
+		padding-right: 0 0.9375rem;
+		&.align-right {
+			text-align: right;
+			padding-right: 15px;
+		}
+		.formRadio {
+			.row {
+				padding-bottom: 0;
+			}
+		}
+		.flex {
+			@include media($mo) {
+				width: 100%;
+			}
+		}
+		strong {
+			font-weight: bold;
+		}
+	}
+	@include media($web) {
+		th {
+			justify-content: center;
+		}
+	}
+	@include media($mo) {
+		tr {
+			display: grid;
+			grid-template-columns: 6.25rem auto;
+		}
+		th,
+		td {
+			height: auto;
+			padding: 0.625rem 0;
+			text-align: left;
+			border-bottom: 0.0625rem solid #eee;
+			position: relative;
+			top: 0;
+		}
+		td {
+			padding-left: 0.5rem;
+		}
+		th {
+			display: flex;
+			justify-content: flex-start;
+			word-break: keep-all;
+			line-height: 1.5;
+			align-items: center;
+		}
+	}
+}
+
+.comTable-3 {
+	box-sizing: border-box;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.comTable-3 th {
+	text-align: center;
+	font-size: 1.25rem;
+	color: #fff;
+	height: 3.125rem;
+	font-weight: bold;
+	vertical-align: middle;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	background: #0085cf;
+}
+.comTable-3 td {
+	padding-left: 1.0625rem;
+	font-size: 1.125rem;
+	height: 3.125rem;
+	vertical-align: middle;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	background: #fff;
+	line-height: 1.6;
+	word-break: keep-all;
+}
+
+// comSearchTable
+.comSearchTable-1 {
+	&.flex {
+		@include media($web) {
+			flex-direction: column;
+		}
+		.flex.aiCenter {
+			align-items: inherit;
+		}
+		.BottomBtnWrap {
+			margin-top: 0;
+			padding: 5px 0;
+			margin-left: 40px;
+			@include media($mo) {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+		button {
+			height: 100%;
+			font-size: 1.3rem;
+			@include before {
+				top: 50%;
+				left: 3.4rem;
+			}
+		}
+	}
+	th,
+	td {
+		text-align: left;
+		height: 2.9125rem;
+		vertical-align: middle;
+	}
+	th {
+		font-size: 1.125rem;
+		font-weight: bold;
+	}
+	td {
+		position: relative;
+	}
+}
+
+@include media($mo) {
+	.comSearchTable-1 tr {
+		display: grid;
+		grid-template-columns: 6.25rem auto;
+	}
+	.comSearchTable-1 colgroup {
+		display: none;
+	}
+	.comSearchTable-1 th,
+	.comSearchTable-1 td {
+		height: auto;
+		padding: 0.625rem 0;
+		text-align: left;
+		border-bottom: 0.0625rem solid #eee;
+		border-bottom: 0.0625rem solid #eee;
+	}
+	.comSearchTable-1 th {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		word-break: keep-all;
+	}
+}
+
+// textArea
+.comTextArea {
+	@extend %formReset;
+	padding: 1.25rem;
+	height: 12.5rem !important;
+	font-weight: 400 !important;
+}
+
+// checkbox
+.formChkbox__control {
+	display: inline-block;
+	position: relative;
+	padding-left: 1.875rem;
+	margin: 0.35rem 0;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #333;
+	margin-right: 0.3rem;
+	word-break: keep-all;
+	line-height: 1.5;
+	margin-right: 0.3rem;
+}
+.formChkbox {
+	flex-wrap: wrap;
+	@include media($mo) {
+		gap: 2px !important;
+	}
+	.formChkbox__control {
+		@include media($mo) {
+			margin-right: 0.8rem;
+			margin-top: 0;
+			padding-left: 1.575rem;
+		}
+	}
+	.showPop {
+		color: #000;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
+.formChkbox input {
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	left: 0;
+	height: 1.25rem;
+	width: 1.25rem;
+	background: #e6e6e6;
+	cursor: pointer;
+	&:first-of-type {
+		margin-left: 0;
+	}
+	&:focus {
+		outline: 0.0625rem dotted #000 !important;
+	}
+}
+input[type="checkbox"]:focus {
+	outline: 0.0625rem dotted #000 !important;
+}
+.formChkbox__indicator {
+	position: absolute;
+	top: 57%;
+	transform: translateY(-50%);
+	left: 0;
+	height: 1.25rem;
+	width: 1.25rem;
+	background: #e6e6e6;
+	&:focus {
+		outline: 0.0625rem dotted #000;
+	}
+}
+.formChkbox input:checked + .formChkbox__indicator {
+	background: $cMain;
+}
+.formChkbox__indicator::after {
+	content: "";
+	position: absolute;
+	left: 0.5rem;
+	top: 0.25rem;
+	width: 0.1875rem;
+	height: 0.5rem;
+	border: solid #fff;
+	border-width: 0 0.125rem 0.125rem 0;
+	transform: rotate(45deg);
+}
+
+//radio
+.formRadio {
+	font-size: 1.4rem;
+	position: relative;
+	align-items: center;
+	display: flex;
+	.row {
+		margin-right: 0.3rem;
+	}
+	@include media($web) {
+		flex-wrap: wrap;
+	}
+	@include media($mo) {
+		&:first-of-type {
+			position: relative;
+			height: 100%;
+		}
+		.row {
+			padding-bottom: 0;
+		}
+	}
+}
+.formRadio input[type="radio"] {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+	overflow: hidden;
+	position: absolute;
+	left: 0.0625rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.875rem;
+	height: 0.875rem;
+	background: transparent;
+	border: 0;
+	&:focus + label {
+		outline: 0.0625rem dotted #000 !important;
+	}
+}
+.formRadio label {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	min-width: 1rem;
+	min-height: 1rem;
+	line-height: 1rem;
+	font-size: 1.1rem;
+	cursor: pointer;
+	color: #333 !important;
+}
+.formRadio input[type="radio"]:disabled+label{
+	pointer-events: none;
+	opacity: 0.4;
+	color: #aaa!important;
+	font-weight: 300;
+}
+.formRadio label:before {
+	content: "";
+	display: block;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border: 0.0625rem solid #333;
+	background: #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	vertical-align: middle;
+	line-height: 1.125rem;
+	margin-right: 0.5rem;
+}
+.formRadio input[type="radio"]:checked + label {
+	color: #333;
+}
+.formRadio input[type="radio"]:checked + label::before {
+	background-color: #fff;
+	border-color: #ccc;
+}
+.formRadio label:after {
+	@include pCenter;
+	left: 0.5rem;
+	content: "";
+	display: block;
+	display: block;
+	position: absolute;
+	width: 0.625rem;
+	height: 0.625rem;
+	border-radius: 50%;
+}
+.formRadio input[type="radio"]:checked + label::after {
+	background: $cMain;
+	border-color: $cMain;
+}
+
+@include media($mo) {
+	.sizeLg {
+		font-size: 0.9rem;
+	}
+}
+.subcotent .introType .content {
+	padding-top: 0.8375rem !important;
+}
