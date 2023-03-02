@@ -4,8 +4,18 @@
 ##
 ![basics](https://box3101.github.io/JungGu/assets/front/img/%EC%9D%B8%EC%B2%9C%EC%A4%91%EA%B5%AC-%EA%B5%90%EC%9C%A1%ED%8F%AC%ED%84%B8.png)
 
+## 👌 project deliverables
 
-## 🚀 프로젝트조 구조
+- Publishing Guide Document
+
+[인천중구_교육포털_UI_퍼블리싱가이드.pdf](https://box3101.github.io/JungGu/assets/front/img/20230220_%EC%9D%B8%EC%B2%9C%EC%A4%91%EA%B5%AC_%EA%B5%90%EC%9C%A1%ED%8F%AC%ED%84%B8_UI_%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%8B%B1%EA%B0%80%EC%9D%B4%EB%93%9C.pdf)
+
+- URL
+
+[인천중구_교육포털](https://leechanyong.netlify.app/)
+
+
+## 🚀 project structure
 
 Jung-gu Office File Structure
 
@@ -57,7 +67,7 @@ dist
 │   └── js 
 ```
 
-## 🧞 터미널 명령
+## 🧞 terminal command
 
 All commands are run from the root of the project, from a terminal:
 
